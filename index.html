@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<link rel="canonical" href="https://app-notebook.com/">
+  <!-- CSS-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="appnote.css">
+  <link rel="stylesheet" href="swiper-master\package\css\swiper.css">
+  <title>APPNOTE</title>
+  <meta name=”description” content=”APPNOTEはプログラミング初心者から中級者に向けたWebサービスであり、プログラミング初学者に最も足りないと思われる「具体的な何かを作る」という機会を提供します。様々なソフトウェアとソースコードをすべて公開し、順序をつけて１から説明することで具体的な何かを作る機会の提供を実現していきます。”>
+  <meta name=”ketwords” content=”プログラミング,初心者,何ができる,ゲーム,Webアプリ”>
+  <meta name=”robots” content=”ALL”>
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+</head>
+
+
+<body>
+  <div class="top-box"></div>
+  <p class="top-msg">Our article</p>
+  <div class="swiper-container">
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="gallary-box">
+          <a href="./category/C/category-c.html">
+            <div class="gallary-img"><img src="./img/c.jpg" alt="サムネイル画像など"></div>
+            <div class="gallary-text">
+              <span class="gallary-cat">C言語</span>
+              <h2>C言語</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallary-box">
+          <a href="./category/python/category-python.html">
+            <div class="gallary-img"><img src="./img/python.jpg" alt="サムネイル画像など"></div>
+            <div class="gallary-text">
+              <span class="gallary-cat">Python</span>
+              <h2>Python</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide">
+        <div class="gallary-box">
+          <a href="./category/HTML&CSS/category-html&css.html">
+            <div class="gallary-img"><img src="./img/HTML&CSS.jpg" alt="サムネイル画像など"></div>
+            <div class="gallary-text">
+              <span class="gallary-cat">カテゴリ名</span>
+              <h2>HTML&CSS</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallary-box">
+          <a href="./category/javascript/category-javascript.html">
+            <div class="gallary-img"><img src="./img/javascript.jpg" alt="サムネイル画像など"></div>
+            <div class="gallary-text">
+              <span class="gallary-cat">カテゴリ名</span>
+              <h2>Javascript</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallary-box">
+          <a href="./category/swift/category-swift.html">
+            <div class="gallary-img"><img src="./img/swift.jpg" alt="サムネイル画像など"></div>
+            <div class="gallary-text">
+              <span class="gallary-cat">カテゴリ名</span>
+              <h2>Swift</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <script src="swiper-master\package\js\swiper.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+      autoHeight: true,
+      slidesPerView: 4,
+      spaceBetween: 0,
+      initialSlide: 2,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
+
+    $(function() {
+      var offset = $('#globalNavi').offset();
+
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > offset.top) {
+          $('#globalNavi').addClass('fixed');
+          $('#border1').addClass('fix');
+          $('#border2').addClass('fix');
+          $('#border3').addClass('fix');
+          $('#brog-hidden').addClass('fit');
+          $('.backbox').addClass('fi');
+        } else {
+          $('#globalNavi').removeClass('fixed');
+          $('#border1').removeClass('fix');
+          $('#border2').removeClass('fix');
+          $('#border3').removeClass('fix');
+          $('#brog-hidden').removeClass('fit');
+          $('.backbox').removeClass('fi');
+        }
+      });
+    });
+
+    $(document).ready(function() {
+      setAutoRndColor();
+    });
+
+    function setAutoRndColor() {
+      var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+      $('.backword').animate({
+        color: hue
+      }, 5000);
+      setAutoRndColor();
+    }
+
+    $(".menu-brog").hover(
+      function() {
+        //マウスホバー
+        $("#brog-hidden").addClass("hover");
+      },
+      function() {
+        //マウスアウト
+        $("#brog-hidden").removeClass("hover");
+      }
+    );
+  </script>
+
+
+  <!--トップバー=======================================================================
+            　====================================================================================-->
+  <div id="upper">
+    <nav id="globalNavi">
+      <ul>
+        <li id="title"><a href="#"><img src="./img/logo.jpg" alt="title" title="" width="300px" height="70px"></a></li>
+        <li id="subtitle"><a href="#">0から1を経験できるプログラミング学習サイト</a></li>
+        <li class="menu-brog"><a href="./introduction/introduction.html">ブログ記事</a></li>
+        <li class="menu-into"><a href="./introduction/introduction.html">APPNOTEとは</a></li>
+        <li class="menu-contact"><a href="./contact/contact.php">お問い合わせ</a></li>
+        <div id="sns">
+          <li class="menu1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg></a></li>
+          <li class="menu1"><a href="https://twitter.com/APPNOTE12"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg></a></li>
+          <li class="menu1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#000">
+                <path
+                  d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z" />
+              </svg></a></li>
+
+
+          <li class="menu1"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg></a></li>
+        </div>
+      </ul>
+
+    </nav>
+
+    <a id="smart-logo" href="#"><img src="./img/logo.jpg" alt="title" title="" width="130px" height="35px"></a>
+    <div class="smart">
+      <input type="checkbox" id="smart-menu-btn">
+      <label class="menu" for="smart-menu-btn">
+
+        <div class="smart-menubar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="smart-menu-box">
+          <li class="smart-menu"><a class="s">ブログ記事</a></li>
+          <span class="smart-menu-bar"></span>
+          <li class="smart-menu"><a href="./introduction/introduction.html">APPNOTEとは</a></li>
+          <span class="smart-menu-bar"></span>
+          <li class="smart-menu"><a href="./contact/contact.html">お問い合わせ</a></li>
+          <span class="smart-menu-bar"></span>
+        </ul>
+      </label>
+    </div>
+  </div>
+
+  <!--サブメニューバー=======================================================================
+            　====================================================================================-->
+  <div id="submenu">
+    <div class="onmause">
+      <ul id="brog-hidden">
+
+        <div class="category-hidden-box">
+          <div class="grid">
+            <li class="category-hidden"><a class="category-name" href="./category/C/category-c.html">C言語</a>
+              <a class="smart-category-img2" href="./category/C/category-c.html"><img src="./img/smart-img5.png" alt="title" title="" width="130px" height="35px"></a></li>
+            <li class="category-hidden"><a class="category-name" href="./category/python/category-python.html">Python</a>
+              <a class="smart-category-img4" href="./category/python/category-python.html"><img src="./img/smart-img4.png" alt="title" title="" width="130px" height="35px"></a></li>
+            <li class="category-hidden"><a class="category-name" href="./category/html&css/category-html&css.html">HTML&CSS</a>
+              <a class="smart-category-img" href="./category/html&css/category-html&css.html"><img src="./img/smart-img3.png" alt="title" title="" width="100px" height="35px"></a></li>
+          </div>
+        </div>
+        <div class="category-hidden-box">
+          <div class="grid">
+            <li class="category-hidden"><a class="category-name" href="./category/javascript/category-javascript.html">javascript</a>
+              <a class="smart-category-img" href="./category/javascript/category-javascript.html"><img src="./img/smart-img6.png" alt="title" title="" width="130px" height="35px"></a>
+            </li>
+            <li class="category-hidden"><a class="category-name" href="./category/swift/category-swift.html">Swift</a>
+              <a class="smart-category-img2" href="./category/swift/category-swift.html"><img src="./img/smart-img2.png" alt="title" title="" width="130px" height="35px"></a></li>
+            <li class="category-hidden"><a class="category-name" href="commingsoon.html">Webサイト</a>
+              <a class="smart-category-img" href="#"><img src="./img/smart-img9.png" alt="title" title="" width="130px" height="35px"></a>
+            </li>
+
+
+          </div>
+        </div>
+        <div class="category-hidden-box">
+          <div class="grid">
+            <li class="category-hidden"><a class="category-name" href="./category/desktop/category-desktop.html">デスクトップアプリ</a>
+              <a class="smart-category-img5" href="#"><img src="./img/smart-img8.png" alt="title" title="" width="130px" height="35px"></a></li>
+            <li class="category-hidden"><a class="category-name" href="./category/app-iphone/category-app-iphone.html">iPhoneアプリ</a>
+              <a class="smart-category-img3" href="#"><img src="./img/smart-img7.png" alt="title" title="" width="130px" height="35px"></a></li>
+            <li class="category-hidden"><a class="category-name" href="./category/app-android/category-app-android.html">Androidアプリ</a>
+              <a class="smart-category-img3" href="#"><img src="./img/smart-img10.png" alt="title" title="" width="130px" height="35px"></a></li>
+          </div>
+        </div>
+
+
+
+        <a class="smart-rink-category" href="./category/introduction/category-int.html">カテゴリ一覧へ</a>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <br>
+  <!--タイル状に記事リンクを配置している場所=======================================================================
+====================================================================================-->
+  <div id="smart-top">
+    <img src="./img/brogtop1.jpg" alt="title" title="" width="100%" height="300px">
+  </div>
+  <div id="main">
+    <div class="smart">
+      <div class="smart-phrese">
+        <p>どこよりも実践的に学べるプログラミング学習サイト</p>
+      </div>
+      <div class="smart-phrese-intro">
+        「0から1」を理念とし、プログラミング初心者によくありがちな
+        「文法は勉強したけど、結局なにが作れるの･･･」
+        という疑問を解決するのがAPPNOTEです。
+      </div>
+
+      <a class="smart-jump" href="#brog-hidden">早速勉強を始める</a>
+
+      <div class="smart-course-intro">
+        <h2 class="smart-course-t">CONTENTS</h2>
+        <h3 class="smart-course-tt">それぞれに合ったコンテンツを見つける</h3>
+        <p class="smart-course-ttt">iOSアプリ開発やゲーム作成など、あなたの目的にあった「プログラミング学習」ができる</p>
+        <img id="img11" src="./img/smart-img11.jpg" alt="title" title="" width="100%" height="150px">
+
+      </div>
+
+      <div class="smart-course-intro2">
+        <h3 class="smart-course-tt2">幅広い言語を身に付けられる</h3>
+        <img class="img-cat" src="./img/img-cat1.png" alt="title" title="" width="50px" height="50px">
+        <img class="img-cat" src="./img/img-cat2.png" alt="title" title="" width="50px" height="50px">
+        <img class="img-cat" src="./img/img-cat4.png" alt="title" title="" width="50px" height="50px">
+        <img class="img-cat" src="./img/img-cat5.jpg" alt="title" title="" width="50px" height="50px">
+        <img class="img-cat" src="./img/img-cat6.jpg" alt="title" title="" width="50px" height="50px">
+
+        <p class="smart-course-ttt">Webサイト制作に必要なHTMLやCSSおよびJavascript、ゲームから業務ソフトまで幅広く対応できるC言語、最近とても人気のあるPythonやSwifなどの他にも様々な言語に対応しています</p>
+
+      </div>
+      <div class="smart-course-intro3">
+        <h2 class="smart-course-t">APPNOTEの3つの特長</h2>
+        <p class="smart-merit-ttt">学びたい言語のプログラミングの参考書を読んだけど結局なにができるの？という不満を解決し、実際になにかを制作し、プログラマとして一人前になるまでをサポートしている</p>
+        <img class="img-merit" src="./img/smart-img-merit3.jpg" alt="title" title="" width="100%" height="300px;">
+
+        <p class="backnum">1</p>
+        <h3 class="smart-merit-tt">実際に何かを作ることができる</h3>
+        <p class="smart-merit-ttt">プログラミング学習では、基本的な知識を獲得できた！でも「その後どうしたらいいの？」という壁に阻まれ、プログラミング学習がそこでストップしてしまいがちです。APPNOTEは具体的な作品を一緒に作っていくことで、プログラミング上級者への橋渡しをします。</p>
+        <img class="img-merit" src="./img/smart-img-merit3.jpg" alt="title" title="" width="100%" height="300px;">
+
+        <p class="backnum">2</p>
+        <h3 class="smart-merit-tt">上達への道順が具体的に</h3>
+        <p class="smart-merit-ttt">APPNOTEでは、それぞれのコンテンツに難易度が★の数で示されており、自分が使えるようになりたいプログラミング言語のコンテンツを難易度の低い順に学習していることで、自然と思い通りにプログラムが書けるようになります。</p>
+
+        <img class="img-merit" src="./img/smart-img-merit3.jpg" alt="title" title="" width="100%" height="300px;">
+        <p class="backnum">3</p>
+        <h3 class="smart-merit-tt">ソースコード全公開</h3>
+        <p class="smart-merit-ttt">各コンテンツには、ソフトウェアやアプリのソースコードを全公開し、それぞれのコードの説明を記述しております。プログラミングにまだそこまで慣れていない方は、このソースコードを自分で打ってみるだけでも成長に繋がると思います。また、スキルに自信のある方は自分自身で作品制作にチャレンジしていただき、その答え合わせとしての活用方法も効果的です。</p>
+
+      </div>
+      <h3 class="smart-lets">それではプログラミング学習を<br>始めてみましょう！</h3>
+    </div>
+    <div class="list">
+      <div id=border>
+        <div id="border1" style="background-color:gray; width:1px; height:1100px;"></div>
+        <div id="border2" style="background-color:gray; width:850px; height:1px;"></div>
+        <div id="border3" style="background-color:gray; width:850px; height:1px;"></div>
+      </div>
+      <!--最新記事をタイル状に配置している場所=======================================================================
+  ====================================================================================-->
+
+      <div class="list-box">
+        <a href="./article/calculator/calculator.html">
+          <div class="list-img"><img src="./img/dentaku.jpg" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">Python</span><span class="list-date">日付</span>
+            <h2>GUIの電卓アプリ(デスクトップアプリ)を作ってみよう！（Python）【★★★☆☆</h2>
+          </div>
+        </a>
+      </div>
+      <div class="list-box">
+        <a href="commingsoon.html">
+
+          <div class="list-img">
+            <div class="imgwrap">
+              <img src="./img/stopwatch.jpg" alt="サムネイル画像など"></div>
+          </div>
+          <div class="list-text">
+
+            <span class="list-cat">PHP</span><span class="list-cat">HTML&CSS</span><span class="list-date">日付</span>
+            <h2>初心者でも安心！Webサイトで表示できる電卓プログラムを作ってみよう！(PHP)【★★☆☆☆】</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="list-box">
+        <a href="commingsoon.html">
+          <div class="list-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2>記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+      <div class="list-box">
+        <a href="commingsoon.html">
+          <div class="list-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2>記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="list">
+      <div class="list-box">
+        <a href="commingsoon.html">
+          <div class="list-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2>記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+      <div class="list-box">
+        <a href="commingsoon.html">
+          <div class="list-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2>記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="right">
+    <div id="adv">
+
+      <iframe style="width:140px;height:240px;" marginwidth="20px;" marginheight="0" scrolling="no" frameborder="0"
+        src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=appnote04-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4797398892&linkId=9181c4d33f8523aa0cfec6966936a2c9&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+      </iframe>
+      <iframe style="width:140px;height:240px;" marginwidth="20px" marginheight="0" scrolling="no" frameborder="0"
+        src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=appnote04-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4297105799&linkId=b7fceefd40228e5a5b8870d98a03f1fe&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+      </iframe>
+
+      <br>
+    </div>
+    <div class="rigtitle">
+      <p id="right_title">カテゴリ</p>
+    </div>
+  </div>
+
+  <div id="rank">
+    <h2 class="rank-top">人気コンテンツ</h2>
+    <ul class="ranking">
+
+      <div class="ranking-box">
+        <a href="commingsoon.html">
+          <div class="rank-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2 class="rank-title">記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="ranking-box">
+        <a href="commingsoon.html">
+          <div class="rank-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2 class="rank-title">記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="ranking-box">
+        <a href="commingsoon.html">
+          <div class="rank-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2 class="rank-title">記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="ranking-box">
+        <a href="commingsoon.html">
+          <div class="rank-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2 class="rank-title">記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="ranking-box">
+        <a href="commingsoon.html">
+          <div class="rank-img"><img src="./img/image.png" alt="サムネイル画像など"></div>
+          <div class="list-text">
+            <span class="list-cat">カテゴリ名</span><span class="list-date">日付</span>
+            <h2 class="rank-title">記事のタイトルがここに入ります。</h2>
+          </div>
+        </a>
+      </div>
+    </ul>
+    <div class="logo-back">
+      <div class="logo-rank"><img class="rankimg" src="./img/ranking.png" alt="サムネイル画像など"></div>
+    </div>
+
+    <div class="smart-footer">
+      <div class="menu-f">
+        <a class="menu-fa" href="commingsoon.html">ブログ記事</a>
+      </div>
+      <div class="menu-h">
+        <li><a class="menu-g" href="commingsoon.html">C言語</a></li>
+        <li><a class="menu-g" href="commingsoon.html">Python</a></li>
+        <li><a class="menu-g" href="commingsoon.html">HTML&CSS</a></li>
+        <li><a class="menu-g" href="commingsoon.html">Javascript</a></li>
+        <li><a class="menu-g" href="commingsoon.html">Swift</a></li>
+              </div>
+                    <div class="menu-h">
+        <li><a class="menu-g" href="commingsoon.html">Webサイト制作</a></li>
+        <li><a class="menu-g" href="commingsoon.html">ゲーム開発</a></li>
+        <li><a class="menu-g" href="commingsoon.html">ソフトウェア開発</a></li>
+        <li><a class="menu-g" href="commingsoon.html">iOSアプリ開発</a></li>
+        <li><a class="menu-g" href="commingsoon.html">Androidアプリ開発</a></li>
+      </div>
+      <div class="menu-f">
+        <a class="menu-fa" href="commingsoon.html">APPNOTEとは</a>
+      </div>
+      <div class="menu-f">
+        <a class="menu-fa" href="./contact/contact.html">お問い合わせ</a>
+        <img id="last-logo" src="./img/logo.png" alt="サムネイル画像など">
+
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div id="footer">
+    <div class="menu-f">
+      <a class="menu-fa" href="commingsoon.html">ブログ記事</a>
+    </div>
+
+    <div class="menu-f">
+      <a class="menu-fa" href="commingsoon.html">APPNOTEとは</a>
+    </div>
+    <div class="menu-f">
+      <a class="menu-fa" href="./contact/contact.html">お問い合わせ</a>
+    </div>
+    <div class="menu-h">
+      <li><a class="menu-g" href="commingsoon.html">C言語</a></li>
+      <li><a class="menu-g" href="commingsoon.html">Python</a></li>
+      <li><a class="menu-g" href="commingsoon.html">HTML&CSS</a></li>
+      <li><a class="menu-g" href="commingsoon.html">Javascript</a></li>
+      <li><a class="menu-g" href="commingsoon.html">Swift</a></li>
+      <li><a class="menu-g" href="commingsoon.html">Webサイト制作</a></li>
+      <li><a class="menu-g" href="commingsoon.html">ソフトウェア開発</a></li>
+      <li><a class="menu-g" href="commingsoon.html">iOSアプリ開発</a></li>
+      <li><a class="menu-g" href="commingsoon.html">Androidアプリ開発</a></li>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
